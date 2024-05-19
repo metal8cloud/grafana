@@ -38,9 +38,14 @@ export const TopSearchBar = React.memo(function TopSearchBar() {
   return (
     <div className={styles.layout}>
       <TopSearchBarSection>
-        <a className={styles.logo} href={homeUrl} title="Go to home">
-          <Branding.MenuLogo className={styles.img} />
-        </a>
+        <a className={styles.fix_top_a} href={homeUrl} title="Go to home">Grafana</a>&nbsp;&nbsp;&nbsp;
+        <u className={styles.fix_top_u} onClick={() => {
+          document.location='/registry-ui/';
+        }} title="Docker registry">Registry</u>&nbsp;&nbsp;&nbsp;
+        <u className={styles.fix_top_u} onClick={() => {
+          document.location='/c/main/';
+        }} title="Kubernetes Management">Kubernetes</u>
+
         <OrganizationSwitcher />
       </TopSearchBarSection>
 
@@ -92,6 +97,12 @@ const getStyles = (theme: GrafanaTheme2) => ({
   img: css({
     height: theme.spacing(3),
     width: theme.spacing(3),
+  }),
+  fix_top_a: css({
+    textDecoration: 'underline',
+  }),
+  fix_top_u: css({
+    cursor: 'pointer',
   }),
   logo: css({
     display: 'flex',
