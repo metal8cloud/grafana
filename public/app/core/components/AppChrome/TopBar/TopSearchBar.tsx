@@ -40,7 +40,7 @@ export const TopSearchBar = React.memo(function TopSearchBar() {
       <TopSearchBarSection>
       <u className={styles.fix_top_u} onClick={() => {
           document.location='/c/main/';
-        }} title="Kubernetes Management">Kubernetes dashboard</u>&nbsp;&nbsp;&nbsp;
+        }} title="Kubernetes Management">Kubernetes Dashboard</u>&nbsp;&nbsp;&nbsp;
         <a className={styles.fix_top_a} href={homeUrl} title="Go to home">Grafana</a>&nbsp;&nbsp;&nbsp;
         <u className={styles.fix_top_u} onClick={() => {
           document.location='/registry-ui/';
