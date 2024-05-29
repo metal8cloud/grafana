@@ -38,13 +38,13 @@ export const TopSearchBar = React.memo(function TopSearchBar() {
   return (
     <div className={styles.layout}>
       <TopSearchBarSection>
+      <u className={styles.fix_top_u} onClick={() => {
+          document.location='/c/main/';
+        }} title="Kubernetes Management">Kubernetes dashboard</u>&nbsp;&nbsp;&nbsp;
         <a className={styles.fix_top_a} href={homeUrl} title="Go to home">Grafana</a>&nbsp;&nbsp;&nbsp;
         <u className={styles.fix_top_u} onClick={() => {
           document.location='/registry-ui/';
-        }} title="Docker registry">Registry</u>&nbsp;&nbsp;&nbsp;
-        <u className={styles.fix_top_u} onClick={() => {
-          document.location='/c/main/';
-        }} title="Kubernetes Management">Kubernetes</u>
+        }} title="Docker registry">Registry</u>
 
         <OrganizationSwitcher />
       </TopSearchBarSection>
