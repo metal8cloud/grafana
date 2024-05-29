@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t grafana .
+docker buildx build --platform linux/amd64 -t grafana .
 #docker tag grafana 192.168.64.3:32000/grafana
 #docker push 192.168.64.3:32000/grafana
 docker tag grafana registry.metal8.cloud/grafana
